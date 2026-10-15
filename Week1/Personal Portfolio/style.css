@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f4f4;
+    color:#333;
+}
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+.hero{
+    width:75%;
+    margin:40px auto;
+    padding:30px;
+    border:1px solid gray;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.hero-text{
+    width:70%;
+}
+.hero-text h1{
+    margin-bottom:10px;
+}
+.hero-text h3{
+    margin:10px 0;
+}
+.hero-text p,
+.about p,
+.contact-box p{
+    line-height:28px;
+}
+.hero-image{
+
+    width:30%;
+}
+
+.hero-image img{
+    width:150px;
+    border:1px solid gray;
+}
+
+section{
+    width:75%;
+    margin:40px auto;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.skill,
+.contact-box{
+    background:white;
+    border:1px solid gray;
+    padding:20px;
+    align-items:center;
+}
+
+
+.contact-box{
+    width:60%;
+    margin:auto;
+    text-align:center;
+}
+
+.contact-box a{
+    text-decoration:none;
+    color:blue;
+}
+
+footer{
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    background:#0f172a;
+    color:white;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SGPA & CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <h2>SGPA & CGPA Calculator</h2>
+
+        <input type="number" id="prevCGPA" placeholder="Previous CGPA">
+
+        <input type="number" id="prevCredits" placeholder="Previous Credits">
+
+        <br>
+
+        <input type="number" id="subjectCount" placeholder="Number of Subjects">
+
+        <button onclick="generateSubjects()">Generate</button>
+
+        <div id="subjects"></div>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

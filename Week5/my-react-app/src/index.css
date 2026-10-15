@@ -1,0 +1,68 @@
+/* Remove default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* Navigation */
+nav {
+  background-color: #222;
+  padding: 18px;
+  text-align: right;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #61dafb;
+}
+
+
+.logo {
+  float: left;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+/* Page content */
+.page {
+  width: 80%;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.page h1 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.page h2 {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.page p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 17px;
+}

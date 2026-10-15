@@ -1,0 +1,81 @@
+<div class="container">
+  <h2>Contact Form</h2>
+
+  <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+
+    <label>Name</label>
+    <input type="text" formControlName="name"
+           placeholder="Enter your name">
+
+    <div class="error"
+      *ngIf="contactForm.get('name')?.touched &&
+             contactForm.get('name')?.invalid">
+      <span *ngIf="contactForm.get('name')?.errors?.['required']">
+        Name is required
+      </span>
+      <span *ngIf="contactForm.get('name')?.errors?.['minlength']">
+        Name must contain at least 2 characters
+      </span>
+      <span *ngIf="contactForm.get('name')?.errors?.['maxlength']">
+        Name cannot exceed 30 characters
+      </span>
+      <span *ngIf="contactForm.get('name')?.errors?.['pattern']">
+        Name can contain only letters and spaces
+      </span>
+    </div>
+
+    <label>Email</label>
+    <input type="email" formControlName="email"
+           placeholder="Enter your email">
+
+    <div class="error"
+      *ngIf="contactForm.get('email')?.touched &&
+             contactForm.get('email')?.invalid">
+      <span *ngIf="contactForm.get('email')?.errors?.['required']">
+        Email is required
+      </span>
+      <span *ngIf="contactForm.get('email')?.errors?.['email']">
+        Enter a valid email address
+      </span>
+    </div>
+
+    <label>Phone Number</label>
+    <input type="text" formControlName="phone"
+           placeholder="Enter 10-digit phone number"
+           maxlength="10">
+
+    <div class="error"
+      *ngIf="contactForm.get('phone')?.touched &&
+             contactForm.get('phone')?.invalid">
+      <span *ngIf="contactForm.get('phone')?.errors?.['required']">
+        Phone number is required
+      </span>
+      <span *ngIf="contactForm.get('phone')?.errors?.['pattern']">
+        Enter a valid 10-digit phone number starting with 6, 7, 8 or 9
+      </span>
+    </div>
+
+    <label>Message</label>
+    <textarea formControlName="message"
+              placeholder="Enter your message"></textarea>
+
+    <div class="error"
+      *ngIf="contactForm.get('message')?.touched &&
+             contactForm.get('message')?.invalid">
+      <span *ngIf="contactForm.get('message')?.errors?.['required']">
+        Message is required
+      </span>
+      <span *ngIf="contactForm.get('message')?.errors?.['minlength']">
+        Message must contain at least 10 characters
+      </span>
+      <span *ngIf="contactForm.get('message')?.errors?.['maxlength']">
+        Message cannot exceed 200 characters
+      </span>
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid">
+      Submit
+    </button>
+
+  </form>
+</div>

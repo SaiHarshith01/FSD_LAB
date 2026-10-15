@@ -1,0 +1,47 @@
+<h2>Student Contact Form</h2>
+
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+
+  <label>Name:</label>
+  <input type="text" formControlName="name">
+
+  <div class="error" *ngIf="studentForm.controls.name.invalid &&
+       studentForm.controls.name.touched">
+    Name is required.
+  </div>
+
+  <br>
+
+  <label>Email:</label>
+  <input type="email" formControlName="email">
+
+  <div class="error" *ngIf="studentForm.controls.email.invalid &&
+       studentForm.controls.email.touched">
+    Enter a valid email address.
+  </div>
+
+  <br>
+
+  <label>Phone:</label>
+  <input type="text" formControlName="phone">
+
+  <div class="error" *ngIf="studentForm.controls.phone.invalid &&
+       studentForm.controls.phone.touched">
+    Enter a valid 10-digit phone number.
+  </div>
+
+  <br>
+
+  <label>Message:</label>
+  <textarea formControlName="message"></textarea>
+
+  <div class="error" *ngIf="studentForm.controls.message.invalid &&
+       studentForm.controls.message.touched">
+    Message is required.
+  </div>
+
+  <br>
+
+  <button type="submit">Submit</button>
+
+</form>
